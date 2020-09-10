@@ -57,7 +57,6 @@ class Movement:
         self.stp_per_inch_h = 6080
 
     def move_fence(self, new_position, start_position):
-
         # task to complete first
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.DIR_f, GPIO.OUT)
@@ -99,14 +98,10 @@ class Movement:
                 GPIO.cleanup()
                 return new_position
         elif start_position == new_position:
+            GPIO.cleanup()
             return new_position
 
-        # reset things for next function
-        GPIO.cleanup()
-
     def change_angle(self, new_position, start_position):
-        # setup variables
-
         # task to complete first
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.DIR_a, GPIO.OUT)
@@ -148,16 +143,10 @@ class Movement:
                 return new_position
 
         elif start_position == new_position:
+            GPIO.cleanup()
             return new_position
 
-        # reset things for next function
-        GPIO.cleanup()
-        # C_angle_e.delete(0,END)
-        # C_angle_e.insert(0, str(new_position))
-
     def move_blade(self, new_position, start_position):
-        # setup variables
-
         # task to complete first
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.DIR_h, GPIO.OUT)
@@ -199,7 +188,5 @@ class Movement:
                 return new_position
 
         elif start_position == new_position:
+            GPIO.cleanup()
             return new_position
-
-        # C_height_e.delete(0,END)
-        # C_height_e.insert(0, str(new_position))
