@@ -1,5 +1,5 @@
-#Written By: Jeremy Fielding
-#Project based on Youtube Video https://youtu.be/JEImn7s7x1o
+# Written By: Jeremy Fielding
+# Project based on Youtube Video https://youtu.be/JEImn7s7x1o
 import gi
 
 gi.require_version("Gtk", "3.0")
