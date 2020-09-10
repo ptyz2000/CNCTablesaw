@@ -10,19 +10,19 @@ math = ""
 buffer = 0
 
 
-Movement = Movement.Movement()
+movement = Movement.Movement()
 
 
 def move_fence(entry):
-    currentFence.set_text(str(Movement.move_fence(float(entry.get_text()), float(currentFence.get_text()))))
+    currentFence.set_text(str(movement.move_fence(float(entry.get_text()), float(currentFence.get_text()))))
 
 
 def change_angle(entry):
-    currentAngle.set_text(str(Movement.change_angle(float(entry.get_text()), float(currentAngle.get_text()))))
+    currentAngle.set_text(str(movement.change_angle(float(entry.get_text()), float(currentAngle.get_text()))))
 
 
 def move_blade(entry):
-    currentBlade.set_text(str(Movement.move_blade(float(entry.get_text()), float(currentBlade.get_text()))))
+    currentBlade.set_text(str(movement.move_blade(float(entry.get_text()), float(currentBlade.get_text()))))
 
 
 def calc_clicked(button):
